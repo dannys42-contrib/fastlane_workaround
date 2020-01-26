@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Attemptin to run java.. forwarding to xcrun instead..."
+echo "    parameters: ${@}"
+params=( iTMSTransporter )
+
+while [ $# -gt 0 ]; do
+    if expr "$1" : '^-D.*' > /dev/null; then
+        echo "Ignoring '$1'"
+    elif expr "$1" : '^-X.*' > /dev/null; then
+        echo "Ignoring '$1'"
+    elif expr "$1" : "^-jar" > /dev/null; then
+        echo "Ignoring $1 $2"
+        shift
+    else
+        echo "Passing thru '$1'"
+        params+=( $1 )
+    fi
+    shift
+done
+
+echo "    New parameters: ${params[@]}"
+exec /usr/bin/xcrun "${params[@]}"
