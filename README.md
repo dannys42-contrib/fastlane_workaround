@@ -21,4 +21,5 @@ This workaround was tested using:
  - macOS 10.15.2 (Catalina)
  - Xcode 11.3.1  (with command line tools installed)
  - [iTunes Transporter v2.0.0](https://help.apple.com/itc/transporteruserguide/en.lproj/static.html)
+     Installed in the default location (/usr/local/itms)
 
