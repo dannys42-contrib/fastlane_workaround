@@ -1,3 +1,5 @@
+Note: Resolved in fastlane 2.150.0.rc4 (PR fastlane/fastlane#16689)[https://github.com/fastlane/fastlane/pull/16689]
+
 # fastlane_workaround
 A simple workaround for fastlane + itms transport integration affecting fastlane-2.140.0 and Xcode 11.0+.
 
